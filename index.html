@@ -1,18 +1,645 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Project</title>
-</head>
+        <meta
+            name="description"
+            content="Learn how to use HTML figure and figcaption elements to create semantic image captions."
+        />
 
-<body>
-    start
+        <meta name="theme-color" content="#f5f1e9" />
 
-    <script src="./assets/js/main.js"></script>
-</body>
+        <title>012 — Image with Caption | Frame / Field Notes</title>
 
+        <!--=============== FONTS ===============-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <a href="#" class="logo" aria-label="Frame Field Notes home">
+                <span class="logo-symbol">F.</span>
+
+                <span class="logo-name">
+                    FRAME
+                    <small>/ FIELD NOTES</small>
+                </span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#intro" class="nav-link active">Overview</a>
+                <a href="#lesson" class="nav-link">Lesson</a>
+                <a href="#gallery" class="nav-link">Examples</a>
+                <a href="#playground" class="nav-link">Studio</a>
+            </nav>
+
+            <div class="header-right">
+                <span class="edition">EDITION #012</span>
+
+                <a
+                    href="https://freetimezp.github.io/roadmap-web-coding/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="roadmap-link"
+                >
+                    ROADMAP <span>↗</span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!--=============== HERO ===============-->
+            <section class="hero section" id="intro">
+                <div class="hero-top">
+                    <span class="section-number">HTML STUDY / #012</span>
+
+                    <span class="hero-category">
+                        IMAGE PRESENTATION — SEMANTIC HTML
+                    </span>
+                </div>
+
+                <div class="hero-content">
+                    <div class="hero-copy">
+                        <p class="hero-kicker">
+                            <span class="orange-dot"></span>
+                            A PICTURE HAS A STORY
+                        </p>
+
+                        <h1>
+                            Every image<br />
+                            needs a <em>frame.</em>
+                        </h1>
+
+                        <p class="hero-description">
+                            Learn how to connect images with meaningful captions
+                            using the semantic HTML elements figure and
+                            figcaption.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#lesson" class="button-primary">
+                                Explore the lesson <span>↘</span>
+                            </a>
+
+                            <span class="hero-duration">
+                                <strong>06</strong>
+                                MIN READ
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- HERO IMAGE -->
+                    <div class="hero-visual">
+                        <div class="hero-image-wrap">
+                            <img
+                                src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200&auto=format&fit=crop"
+                                alt="Mountain landscape reflected in a calm alpine lake"
+                                class="hero-image"
+                            />
+
+                            <span class="image-index">FIG. 001</span>
+
+                            <span class="image-stamp">VISUAL<br />STORY</span>
+                        </div>
+
+                        <div class="hero-caption">
+                            <span>01 / THE NATURAL WORLD</span>
+
+                            <p>
+                                A quiet morning in the mountains. Sometimes the
+                                smallest details tell the biggest stories.
+                            </p>
+
+                            <span class="caption-arrow">↗</span>
+                        </div>
+
+                        <div class="hero-decoration">
+                            FRAME<br />YOUR<br />STORY.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-bottom">
+                    <span>LEARN / BUILD / UNDERSTAND</span>
+                    <span>SCROLL TO DISCOVER ↓</span>
+                </div>
+            </section>
+
+            <!--=============== LESSON INTRO ===============-->
+            <section class="lesson section" id="lesson">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-number">01 — THE BASICS</span>
+
+                        <h2>
+                            More than<br />
+                            just an <em>image.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        HTML gives us dedicated elements to group visual content
+                        with its description. Let's understand how they work
+                        together.
+                    </p>
+                </div>
+
+                <div class="concept-grid">
+                    <!-- FIGURE -->
+                    <article class="concept-card">
+                        <span class="concept-number">01</span>
+
+                        <div class="concept-icon figure-icon">
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <h3>figure</h3>
+
+                        <p>
+                            The figure element represents self-contained
+                            content, such as an image, illustration, diagram or
+                            code example.
+                        </p>
+
+                        <code>&lt;figure&gt;</code>
+                    </article>
+
+                    <!-- FIGCAPTION -->
+                    <article class="concept-card featured-card">
+                        <span class="concept-number">02</span>
+
+                        <div class="concept-icon caption-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <h3>figcaption</h3>
+
+                        <p>
+                            The figcaption element provides a caption or
+                            description for its parent figure.
+                        </p>
+
+                        <code>&lt;figcaption&gt;</code>
+                    </article>
+
+                    <!-- IMAGE -->
+                    <article class="concept-card">
+                        <span class="concept-number">03</span>
+
+                        <div class="concept-icon image-icon">
+                            <span></span>
+                        </div>
+
+                        <h3>img</h3>
+
+                        <p>
+                            The image element displays visual content. Its alt
+                            attribute provides alternative text for meaningful
+                            images.
+                        </p>
+
+                        <code>&lt;img&gt;</code>
+                    </article>
+                </div>
+
+                <!-- CODE EXAMPLE -->
+                <div class="code-study">
+                    <div class="code-study-header">
+                        <div>
+                            <span class="section-number">HTML / 001</span>
+                            <h3>Build your first figure.</h3>
+                        </div>
+
+                        <span class="code-language">HTML5</span>
+                    </div>
+
+                    <div class="code-study-content">
+                        <pre><code>&lt;figure&gt;
+    &lt;img
+        src="mountain.jpg"
+        alt="Mountain landscape reflected in a lake"
+    &gt;
+
+    &lt;figcaption&gt;
+        A peaceful morning in the mountains.
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+                        <div class="code-study-note">
+                            <span>✳</span>
+
+                            <p>
+                                The figure element groups the image and its
+                                caption into one meaningful unit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== IMAGE GALLERY ===============-->
+            <section class="gallery section" id="gallery">
+                <div class="section-heading gallery-heading">
+                    <div>
+                        <span class="section-number">02 — VISUAL EXAMPLES</span>
+
+                        <h2>
+                            Stories in<br />
+                            <em>three frames.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        One semantic structure. Different visual presentations.
+                        The caption can provide context, identify a subject or
+                        credit its source.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- EXAMPLE 01 -->
+                    <figure class="gallery-item gallery-large">
+                        <div class="gallery-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&auto=format&fit=crop"
+                                alt="Ocean waves moving toward a sandy shore"
+                                loading="lazy"
+                            />
+
+                            <span class="gallery-label">FIG. 002</span>
+                        </div>
+
+                        <figcaption>
+                            <span class="caption-category">
+                                01 / THE OCEAN
+                            </span>
+
+                            <h3>The rhythm of water.</h3>
+
+                            <p>
+                                The ocean moves constantly, yet every wave
+                                creates a moment that feels completely still.
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                    <!-- EXAMPLE 02 -->
+                    <figure class="gallery-item gallery-small">
+                        <div class="gallery-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900&auto=format&fit=crop"
+                                alt="Modern architectural building with geometric lines"
+                                loading="lazy"
+                            />
+
+                            <span class="gallery-label">FIG. 003</span>
+                        </div>
+
+                        <figcaption>
+                            <span class="caption-category">
+                                02 / ARCHITECTURE
+                            </span>
+
+                            <h3>Lines and light.</h3>
+
+                            <p>
+                                Architecture becomes a visual language through
+                                geometry, texture and light.
+                            </p>
+                        </figcaption>
+                    </figure>
+
+                    <!-- EXAMPLE 03 -->
+                    <figure class="gallery-item gallery-small">
+                        <div class="gallery-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=900&auto=format&fit=crop"
+                                alt="Golden sunlight illuminating a green landscape"
+                                loading="lazy"
+                            />
+
+                            <span class="gallery-label">FIG. 004</span>
+                        </div>
+
+                        <figcaption>
+                            <span class="caption-category">
+                                03 / LANDSCAPE
+                            </span>
+
+                            <h3>Golden hour.</h3>
+
+                            <p>
+                                A landscape transformed by the final sunlight of
+                                the day.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!--=============== SEMANTIC COMPARISON ===============-->
+            <section class="comparison section">
+                <div class="comparison-heading">
+                    <span class="section-number">
+                        03 — UNDERSTAND THE DIFFERENCE
+                    </span>
+
+                    <h2>Caption vs <em>alt text.</em></h2>
+
+                    <p>
+                        They both describe images, but they serve different
+                        purposes.
+                    </p>
+                </div>
+
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <span class="comparison-tag">ALTERNATIVE TEXT</span>
+
+                        <h3>alt attribute</h3>
+
+                        <p>
+                            Describes the image when it cannot be seen. It is
+                            especially important for screen-reader users.
+                        </p>
+
+                        <div class="comparison-example">
+                            <span>EXAMPLE</span>
+
+                            <code>
+                                alt="A red bicycle beside a brick wall"
+                            </code>
+                        </div>
+                    </div>
+
+                    <div class="comparison-card comparison-highlight">
+                        <span class="comparison-tag">VISIBLE DESCRIPTION</span>
+
+                        <h3>figcaption</h3>
+
+                        <p>
+                            Adds visible context, explanation, credit or
+                            information related to the image.
+                        </p>
+
+                        <div class="comparison-example">
+                            <span>EXAMPLE</span>
+
+                            <code>
+                                A vintage bicycle photographed in Copenhagen.
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-note">
+                    <span>✳</span>
+
+                    <p>
+                        A caption does not replace meaningful alt text. They can
+                        complement each other.
+                    </p>
+                </div>
+            </section>
+
+            <!--=============== PLAYGROUND ===============-->
+            <section class="playground section" id="playground">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-number">04 — CREATIVE STUDIO</span>
+
+                        <h2>
+                            Make your<br />
+                            own <em>frame.</em>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Experiment with caption positions, image presentation
+                        and figure styles. See how the same HTML structure can
+                        create different results.
+                    </p>
+                </div>
+
+                <div class="studio-layout">
+                    <!-- LIVE PREVIEW -->
+                    <div class="studio-preview">
+                        <div class="preview-top">
+                            <span>LIVE PREVIEW</span>
+                            <span class="preview-status">
+                                <i></i> INTERACTIVE
+                            </span>
+                        </div>
+
+                        <figure class="preview-figure" id="preview-figure">
+                            <div class="preview-image-wrap">
+                                <img
+                                    id="preview-image"
+                                    src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000&auto=format&fit=crop"
+                                    alt="Mountain landscape reflected in an alpine lake"
+                                />
+                            </div>
+
+                            <figcaption id="preview-caption">
+                                <span class="preview-caption-label">
+                                    FIG. 005 / LANDSCAPE
+                                </span>
+
+                                <strong id="preview-title">
+                                    The quiet side of nature.
+                                </strong>
+
+                                <span id="preview-description">
+                                    A peaceful landscape captured in the early
+                                    morning light.
+                                </span>
+                            </figcaption>
+                        </figure>
+
+                        <div class="preview-bottom">
+                            <span>FIGURE / FIGCAPTION</span>
+                            <span id="preview-style-label">
+                                EDITORIAL STYLE
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- CONTROLS -->
+                    <div class="studio-controls">
+                        <div class="control-heading">
+                            <span class="section-number">CUSTOMIZE / 001</span>
+                            <h3>Caption settings</h3>
+                        </div>
+
+                        <div class="control-group">
+                            <label>CAPTION POSITION</label>
+
+                            <div class="control-buttons">
+                                <button
+                                    class="control-option active"
+                                    data-position="bottom"
+                                    type="button"
+                                >
+                                    Bottom
+                                </button>
+
+                                <button
+                                    class="control-option active"
+                                    data-position="top"
+                                    type="button"
+                                >
+                                    Top
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label>FIGURE STYLE</label>
+
+                            <div class="control-buttons">
+                                <button
+                                    class="style-option active"
+                                    data-style="editorial"
+                                    type="button"
+                                >
+                                    Editorial
+                                </button>
+
+                                <button
+                                    class="style-option"
+                                    data-style="minimal"
+                                    type="button"
+                                >
+                                    Minimal
+                                </button>
+
+                                <button
+                                    class="style-option"
+                                    data-style="dark"
+                                    type="button"
+                                >
+                                    Dark
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="caption-title"> CAPTION TITLE </label>
+
+                            <input
+                                type="text"
+                                id="caption-title"
+                                value="The quiet side of nature."
+                                maxlength="70"
+                            />
+                        </div>
+
+                        <div class="control-group">
+                            <label for="caption-description">
+                                CAPTION DESCRIPTION
+                            </label>
+
+                            <textarea
+                                id="caption-description"
+                                rows="3"
+                                maxlength="160"
+                            >
+A peaceful landscape captured in the early morning light.</textarea
+                            >
+                        </div>
+
+                        <button
+                            class="reset-button"
+                            id="reset-studio"
+                            type="button"
+                        >
+                            ↺ Reset studio
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== PRACTICE ===============-->
+            <section class="practice section" id="practice">
+                <div class="practice-content">
+                    <span class="section-number">05 — YOUR NEXT STEP</span>
+
+                    <h2>
+                        A good image<br />
+                        tells a story.<br />
+                        <em>Good HTML frames it.</em>
+                    </h2>
+
+                    <p>
+                        You now understand how figure and figcaption connect
+                        images with meaningful descriptions. Practice the
+                        concepts and build your own semantic image components.
+                    </p>
+
+                    <a
+                        href="https://freetimezp.github.io/roadmap-web-coding/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button-primary"
+                    >
+                        Back to roadmap <span>↗</span>
+                    </a>
+                </div>
+
+                <div class="practice-art">
+                    <div class="practice-frame">
+                        <div class="practice-frame-inner">
+                            <span>FRAME</span>
+                            <strong>012</strong>
+                            <small>VISUAL STORYTELLING</small>
+                        </div>
+                    </div>
+
+                    <span class="practice-art-note">
+                        THE ART OF PRESENTATION
+                    </span>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <a href="#" class="footer-logo"> FRAME<span>/FIELD NOTES</span> </a>
+
+            <span>FREE TIME / LEARNING SERIES</span>
+
+            <span>HTML FUNDAMENTALS — 012</span>
+
+            <div id="current-year"></div>
+        </footer>
+
+        <!--=============== JAVASCRIPT ===============-->
+        <script src="./assets/js/main.js" defer></script>
+    </body>
 </html>
